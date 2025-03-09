@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yatay menüyü açılır menüye dönüştürme</title>
+
+    <!-- Font Awesome Kütüphanesi -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        ul {
+            background-color: black;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            /* Menü ortalanır */
+        }
+
+        ul li {
+            display: inline-block;
+            /* inline yerine inline-block */
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: white;
+            padding: 15px 30px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        ul li:hover {
+            background-color: orange;
+        }
+
+        ul li a:hover {
+            color: red;
+        }
+
+        ul li a i {
+            margin-right: 8px;
+            /* İkon ile yazı arasına boşluk */
+        }
+
+        #second-content {
+            position: absolute;
+            /* absolute : bağımsız yapar. */
+            margin-left: 20px;
+            margin-top: 15px;
+            display: none;
+            width: 135px;
+      z-index:1;
+        }
+
+        #first-content:hover #second-content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a href="https://www.google.com"><i class="fa-brands fa-google"></i> Google</a></li>
+        <li id="first-content"><a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i> Youtube</a>
+            <div id="second-content">
+                <ul>
+                    <li style="display: block;"><a href="#">MUSA</a></li>
+                    <li style="display: block;"><a href="#">AZAT</a>
+                    </li>
+                    <li style="display: block;"><a href="#">FURKAN</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+        <li><a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+    </ul>
+</body>
+
+</html>
+<!-- a : inline dır
+     li : blockdur.
+      -->
